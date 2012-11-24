@@ -1,8 +1,11 @@
-Forem.user_class = "Refinery::User"
-Forem.email_from_address = "please-change-me@example.com"
+#Forem.user_class = "Refinery::User"
+#Forem.email_from_address = "please-change-me@example.com"
+
+#Forem.per_page = 20
+
+
 # If you do not want to use gravatar for avatars then specify the method to use here:
 # Forem.avatar_user_method = :custom_avatar_url
-Forem.per_page = 20
 
 
 # Rails.application.config.to_prepare do

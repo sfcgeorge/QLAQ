@@ -1,6 +1,7 @@
 QLAQ::Application.routes.draw do
+  root :to => 'launch#index'
 
-  mount Forem::Engine, :at => "/forums"
+  #mount Forem::Engine, :at => "/forums"
 
   # This line mounts Refinery's routes at the root of your application.
   # This means, any requests to the root URL of your application will go to Refinery::PagesController#home.
