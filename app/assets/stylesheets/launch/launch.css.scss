@@ -1,5 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Lilita+One);
-
 body#launch {
   background: #bee;
   position: relative;
@@ -33,12 +31,20 @@ body#launch {
     }
   }
 
+  #center_curtain {
+    //background: url(/assets/curtains.png);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
   #left_curtain, #right_curtain {
     position: absolute;
     top: 0;
     height: 100%;
-    width: 51%;
-    overflow: hidden;
+    width: 50%;
 
     img {
       position: absolute;

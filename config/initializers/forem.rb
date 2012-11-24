@@ -1,8 +1,11 @@
-#Forem.user_class = "Refinery::User"
-#Forem.email_from_address = "please-change-me@example.com"
+Forem.user_class = "Refinery::User"
+Forem.email_from_address = "info@qlaq.co.uk"
 
-#Forem.per_page = 20
+Forem.per_page = 20
 
+Forem.sign_in_path = '/refinery/login'
+
+Forem.default_gravatar = 'mm'
 
 # If you do not want to use gravatar for avatars then specify the method to use here:
 # Forem.avatar_user_method = :custom_avatar_url

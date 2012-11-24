@@ -10,6 +10,6 @@ class ApplicationController < ActionController::Base
 
   private
   def launch_redirect
-    redirect_to(root_path) and return unless 1 == 0 # Time.now == future
+    redirect_to('/launch') and return unless (current_refinery_user && current_refinery_user.forem_admin) || request.env['PATH_INFO'] == '/refinery/login' || request.env['PATH_INFO'] == '/refinery/logout' # Time.now > future
   end
 end
