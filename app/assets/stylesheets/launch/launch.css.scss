@@ -27,6 +27,10 @@ body#launch {
     margin-left: -150px;
     top: 100px;
     background: url('/assets/sign.png') center top;
+
+    a {
+      color: #fff;
+    }
   }
 
   #left_curtain, #right_curtain {
