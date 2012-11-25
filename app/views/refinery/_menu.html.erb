@@ -21,7 +21,7 @@
       <% end %>
       <li><%= link_to "Log out", refinery.destroy_refinery_user_session_path %></li>
     <% else %>
-      <%#= link_to "Sign up", main_app.new_user_registration_path %>
+      <li><%= link_to "Sign up", main_app.new_forem_user_registration_path %></li>
       <li><%= link_to "Log in", refinery.new_refinery_user_session_path %></li>
     <% end %>
   </ul>
