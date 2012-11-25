@@ -8,6 +8,7 @@
 
 html {
   background-color: #bfd8ff;
+  background-attachment: fixed;
   @include background-image(radial-gradient(50% 0%, circle cover, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 60%),
                             linear-gradient(top, $QLAQ_blue, lighten($QLAQ_blue, 30%)));
   height: 100%;
