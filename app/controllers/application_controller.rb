@@ -14,6 +14,6 @@ class ApplicationController < ActionController::Base
 
   private
   def launch_redirect
-    #redirect_to('/launch') and return unless Time.now > Time.new(2012,11,25,23) || (current_refinery_user && current_refinery_user.forem_admin) || request.env['PATH_INFO'] == '/refinery/login' || request.env['PATH_INFO'] == '/refinery/logout' || @just_signed_in
+    redirect_to('/launch') and return unless Time.now > Time.new(2012,11,25,23) || (current_refinery_user && current_refinery_user.forem_admin) || request.env['PATH_INFO'] == '/refinery/login' || request.env['PATH_INFO'] == '/refinery/logout' || @just_signed_in
   end
 end
