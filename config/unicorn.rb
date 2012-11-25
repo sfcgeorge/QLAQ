@@ -1,0 +1,4 @@
+listen (ENV["PORT"].to_i), :tcp_nopush => false
+
+worker_processes 2 # amount of unicorn workers to spin up
+timeout 20         # restarts workers that hang for 20 seconds
