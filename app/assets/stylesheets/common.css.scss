@@ -9,12 +9,13 @@
 html {
   background-color: #bfd8ff;
   @include background-image(radial-gradient(50% 0%, circle cover, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 60%),
-                            linear-gradient(top, rgb(63, 137, 255), rgb(191, 216, 255)));
+                            linear-gradient(top, $QLAQ_blue, lighten($QLAQ_blue, 30%)));
   height: 100%;
 }
 
 body {
-
+  font-family: 'Lato', sans-serif;
+  color: darken($QLAQ_blue, 45%);
 }
 
 #page {
@@ -22,11 +23,27 @@ body {
   background-color: rgba(255,255,255,0.4);
   @include border-radius(16px);
   @include box-shadow(0 3px 8px rgba(0,0,0,0.2));
-  padding: $radius;
+  padding: $radius * 1.5;
 }
 
 h1 {
   font-family: 'Lilita One', sans-serif;
+}
+
+h1#logo a {
+  color: darken($QLAQ_blue, 40%);
+  text-shadow: -2px 4px 0 transparentize($QLAQ_blue, 0.6);
+  //text-shadow: 0 3px 8px transparentize(darken($QLAQ_blue, 40%), 0.8);
+  text-shadow: 0 2px 0 transparentize(lighten($QLAQ_blue, 20%), 0.4), 0 -2px 0 transparentize(darken($QLAQ_blue, 10%), 0.6);
+  text-decoration: none;
+  font-size: 80px;
+  line-height: 1.5;
+}
+
+section h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-top: 0;
 }
 
 nav {
@@ -48,7 +65,7 @@ nav {
       @include inline-block;
       font-size: 18px;
       font-weight: bold;
-      padding: 15px;
+      padding: 15px 20px;
       margin: 0;
       $num: 8;
 

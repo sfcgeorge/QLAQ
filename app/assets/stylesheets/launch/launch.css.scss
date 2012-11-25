@@ -1,8 +1,13 @@
+@import 'bourbon';
+@import 'base';
+
 body#launch {
-  background: #bee;
+  //background: $QLAQ_blue;
   position: relative;
   padding: 0;
   margin: 0;
+  min-width: 1000px;
+  height: 100%;
 
   h1,h2,h3,h4,h5,h6 {
     text-align: center;
@@ -20,24 +25,54 @@ body#launch {
 
   #info_pannel {
     position: absolute;
-    width: 300px;
+    width: 400px;
     left: 50%;
-    margin-left: -150px;
+    margin-left: -200px;
     top: 100px;
     background: url('/assets/sign.png') center top;
+    color: #fff;
 
     a {
       color: #fff;
     }
+
+    #clock {
+      text-align: center;
+      font-size: 64px;
+      font-weight: bold;
+      background: #000;
+      @include border-radius(5px);
+
+      p {
+        @include inline-block;
+        margin: 0.5em 0;
+      }
+
+      div {
+        @include inline-block;
+      }
+    }
+  }
+
+  #launch_pannel {
+    color: darken($QLAQ_blue, 50%);
+    padding-top: 50px;
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+    h1,h2,h3,h4,h5,h6 {
+      color: darken($QLAQ_blue, 35%);
+    }
   }
 
   #center_curtain {
-    //background: url(/assets/curtains.png);
     position: absolute;
     height: 100%;
     width: 100%;
-    top: 0;
+    top: -0px;
     left: 0;
+    @include box-shadow(0 0 30px rgba(0,0,0,0.6));
   }
 
   #left_curtain, #right_curtain {

@@ -4,6 +4,9 @@ QLAQ::Application.routes.draw do
 
   mount Forem::Engine, :at => "/forums"
 
+  get 'forums/users/register' => 'users#forem_new', :as => :new_forem_user_registration
+  post 'forums/users/register' => 'users#forem_create', :as => :forem_user_registration
+
   # This line mounts Refinery's routes at the root of your application.
   # This means, any requests to the root URL of your application will go to Refinery::PagesController#home.
   # If you would like to change where this extension is mounted, simply change the :at option to something different.

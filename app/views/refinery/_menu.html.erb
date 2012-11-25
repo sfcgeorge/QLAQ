@@ -15,7 +15,7 @@
                  :menu_levels => local_assigns[:menu_levels],
                  :apply_css => false #if you don't care about class='first' class='last' or class='selected' set apply_css to false for speed.
                } -%>
-    <% if refinery_user? %>
+    <% if current_refinery_user %>
       <% if current_refinery_user.forem_admin %>
         <li><%= link_to "Admin", forem.admin_root_url %></li>
       <% end %>
