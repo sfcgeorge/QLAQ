@@ -1,3 +1,5 @@
+<% content_for :meta, tag('meta', :name => 'robots', :content => 'noindex') if @canonical.blank? %>
+
 <% if refinery_user? && current_refinery_user.forem_admin && "#{controller_name}##{action_name}" != 'pages#preview' %>
   <% unless admin? # all required JS included by backend. %>
     <% content_for :stylesheets, stylesheet_link_tag('refinery/site_bar') unless !!local_assigns[:exclude_css] %>

@@ -53,6 +53,10 @@ QLAQ::Application.configure do
 
   config.action_mailer.default_url_options = { :host => 'qlaq.co.uk' }
 
+  config.action_mailer.perform_deliveries = false
+
+  config.action_mailer.raise_delivery_errors = false
+
   # Enable threaded mode
   # config.threadsafe!
 
