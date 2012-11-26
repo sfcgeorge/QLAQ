@@ -8,7 +8,8 @@ Refinery::User.class_eval do
                          }
     validates :secret_code, :inclusion => {
                               :in => [ENV['SECRET_CODE']],
-                              :message => "%{value} is not a valid secret code"
+                              :message => "%{value} is not a valid secret code",
+                              :on => :create
                             }
 
 end
