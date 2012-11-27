@@ -9,9 +9,13 @@
 html {
   background-color: #bfd8ff;
   background-attachment: fixed;
-  @include background-image(radial-gradient(50% 0%, circle cover, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 60%),
-                            linear-gradient(top, $QLAQ_blue, lighten($QLAQ_blue, 30%)));
+  background-size: (1919px/4) (1445px/4), 100% 100%, 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 80% 30px, 0 0, 0 0;
   height: 100%;
+  @include background-image(url('/assets/ub.png'),
+                            radial-gradient(50% 0%, circle cover, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 60%),
+                            linear-gradient(top, $QLAQ_blue, lighten($QLAQ_blue, 30%)));
 }
 
 body {
@@ -88,8 +92,7 @@ nav {
 }
 
 
+@include hidpi (2) {
 
-table.subdued thead th {
-  //background-color: lighten($QLAQ_blue, 20%);
 }
 
