@@ -1,11 +1,12 @@
 QLAQ::Application.routes.draw do
-  #root :to => 'launch#index'
-  match 'launch' => 'launch#index', :as => :launch
-
   mount Forem::Engine, :at => "/forums"
 
-  get 'forums/users/register' => 'users#forem_new', :as => :new_forem_user_registration
-  post 'forums/users/register' => 'users#forem_create', :as => :forem_user_registration
+  scope :forums do
+    resources :users, :only => [:show, :new, :create, :edit, :update]
+
+    get 'users/register' => 'users#forem_new', :as => :new_forem_user_registration
+    post 'users/register' => 'users#forem_create', :as => :forem_user_registration
+  end
 
   # This line mounts Refinery's routes at the root of your application.
   # This means, any requests to the root URL of your application will go to Refinery::PagesController#home.

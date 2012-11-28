@@ -1,0 +1,7 @@
+%h1= @title
+
+= forem_avatar(@user, { size: 200 })
+
+= link_to 'Edit Settings', edit_user_path(@user.id) if @user == current_refinery_user
+
+%p= profile(@user).fetch('entry', []).fetch(0, {})['aboutMe']

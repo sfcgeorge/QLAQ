@@ -5,7 +5,10 @@ Forem.per_page = 20
 
 Forem.sign_in_path = '/refinery/login'
 
-Forem.default_gravatar = 'mm'
+#Forem.default_gravatar = 'mm'
+Forem.default_gravatar = 'identicon'
+
+Forem.user_profile_links = true
 
 # If you do not want to use gravatar for avatars then specify the method to use here:
 # Forem.avatar_user_method = :custom_avatar_url

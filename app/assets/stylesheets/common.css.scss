@@ -86,6 +86,17 @@ nav {
         color: #fff;
         text-decoration: none;
       }
+
+      &.user_first {
+        //@include border-top-left-radius($radius);
+        //@include border-bottom-left-radius($radius);
+        border-left: 2px solid #fff;
+      }
+
+      &.user_last {
+        //@include border-top-right-radius($radius);
+        //@include border-bottom-right-radius($radius);
+      }
     }
   }
 }

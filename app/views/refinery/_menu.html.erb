@@ -17,11 +17,12 @@
                } -%>
     <% if current_refinery_user %>
       <% if current_refinery_user.forem_admin %>
-        <li><%= link_to "Admin", forem.admin_root_url %></li>
+        <!--<li><%= link_to "Admin", forem.admin_root_url %></li>-->
       <% end %>
+      <li class="user_first"><%= link_to "Profile", main_app.user_path(current_refinery_user) %></li>
       <li><%= link_to "Log out", refinery.destroy_refinery_user_session_path %></li>
     <% else %>
-      <li><%= link_to "Sign up", main_app.new_forem_user_registration_path %></li>
+      <li class="user_first"><%= link_to "Sign up", main_app.new_user_path %></li>
       <li><%= link_to "Log in", refinery.new_refinery_user_session_path %></li>
     <% end %>
   </ul>

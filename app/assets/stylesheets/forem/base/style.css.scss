@@ -24,20 +24,6 @@ body{
     color: $lighter-text;
     font-style: oblique;
   }
-  menu{
-    padding-left: 0;
-    a{
-      background-color: $bar1-midbg;
-      padding: .5em;
-      display: inline-block;
-      color: $default-text;
-      text-decoration: none;
-      &:hover{
-        background-color: $bar1-bottombg;
-      }
-      margin: 0;
-    }
-  }
 }
 
 #topic, #forum {
@@ -66,6 +52,20 @@ body{
       &:hover{
         background-color: $light-bg1;
       }
+    }
+  }
+  menu{
+    padding-left: 0;
+    a{
+      background-color: $bar1-midbg;
+      padding: .5em;
+      display: inline-block;
+      color: $default-text;
+      text-decoration: none;
+      &:hover{
+        background-color: $bar1-bottombg;
+      }
+      margin: 0;
     }
   }
 }
