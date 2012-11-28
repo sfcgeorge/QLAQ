@@ -12,4 +12,7 @@ Refinery::User.class_eval do
                               :on => :create
                             }
 
+  def to_param
+    id
+  end
 end
