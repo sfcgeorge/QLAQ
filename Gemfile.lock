@@ -77,6 +77,9 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     ffi (1.0.11)
+    forem-gfm_formatter (1.0.0)
+      forem
+      redcarpet (~> 2.0.1)
     forem-redcarpet (1.0.0)
       pygments.rb (= 0.2.4)
       redcarpet (= 2.0.1)
@@ -198,7 +201,7 @@ GEM
     simple_form (2.0.4)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
-    sprockets (2.2.1)
+    sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -229,6 +232,7 @@ DEPENDENCIES
   bourbon
   coffee-rails (~> 3.2.1)
   forem!
+  forem-gfm_formatter
   forem-theme-base!
   haml-rails
   jquery-rails (~> 2.0.0)

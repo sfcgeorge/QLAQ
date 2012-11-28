@@ -1,8 +1,6 @@
 @import "variables";
 
 body{
-  font-family: GillSans, Calibri, Trebuchet, sans-serif;
-  color: $default-text;
   margin-left: 20%;
   margin-right: 20%;
 }
@@ -27,7 +25,7 @@ body{
 }
 
 #topic, #forum {
-  h2{
+  > h2{
     padding: .5em;
     position: relative;
     background-color: $light-bg1;
@@ -70,64 +68,92 @@ body{
   }
 }
 
-#posts{
-
-  .even{
+#posts {
+  .even {
     background-color: $light-bg1;
   }
-  .odd{
+  .odd {
     background-color: #cfcfcf;
   }
-  .post{
+  .post {
     min-height: 75px;
     clear: both;
     position: relative;
-    .user{
+    .user {
       float: left;
       font-size: .75em;
       width: 140px;
       display: inline-block;
       padding: .5em 1em;
-      .username{
+      .username {
         font-weight: bold;
       }
-      .icon{
+      .icon {
         width: 50px;
         height: 50px;
         display: inline-block;
       }
-      .member-for{
+      .member-for {
         width: 80px;
         display: inline-block;
       }
     }
-    .contents{
+    .contents {
       margin-left: 160px;
       min-height: 100px;
       border-left: 1px solid $mid-bg1;
       padding: .1em 1em;
+      position: relative;
 
-      time{
+      h1, h2, h3, h4, h5, h6 {
+        font-family: inherit;
+        text-align: left;
+      }
+      h6 {
+        font-size: 1em;
+        font-weight: normal;
+      }
+      h5 {
+        font-size: 1em;
+      }
+      h4 {
+        font-size: 1em;
+      }
+      h3 {
+        font-size: 1.1em;
+      }
+      h2 {
+        font-size: 1.3em;
+      }
+      h1 {
+        font-size: 1.5em;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      time {
         padding: 5px;
         color: $lighter-text;
         margin-bottom: 1em;
         font-size: .7em;
         line-height: 18px;
       }
-      .text{
+      .text {
         margin-right: 100px;
       }
-      &:hover .actions{
+      &:hover .actions {
         display: block;
       }
-      .actions{
+      .actions {
         display: none;
         position: absolute;
         right: 10px;
         bottom: 0;
         list-style-type: none;
-        li{
-          a{
+        li {
+          a {
             text-align: center;
             display: block;
             text-decoration: none;
@@ -135,7 +161,7 @@ body{
             margin-bottom: .25em;
             color: $default-text;
             background-color: $mid-bg1;
-            &:hover{
+            &:hover {
               background-color: $mid-bg1-highlight;
             }
           }

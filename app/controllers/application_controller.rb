@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   helper_method :forem_user
 
   def after_sign_in_path_for(resource)
-    '/forums'
+    forem.root_path
   end
 
   protect_from_forgery

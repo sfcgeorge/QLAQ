@@ -50,3 +50,5 @@ gem 'refinerycms-i18n', '~> 2.0.0'
 
 gem 'forem', :git => 'git://github.com/radar/forem.git'
 gem 'forem-theme-base', :git => 'git://github.com/radar/forem-theme-base.git'
+
+gem 'forem-gfm_formatter'
