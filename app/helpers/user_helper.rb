@@ -6,7 +6,7 @@ module UserHelper
       data = Timeout::timeout(1) {
         open(profile_url(user.try(:email)), &:read)
       }
-      data ? JSON.parse(data) : {}
+      data ? JSON.parse(data).fetch('entry', []).fetch(0, {}) : {}
     rescue Exception
       {}
     end

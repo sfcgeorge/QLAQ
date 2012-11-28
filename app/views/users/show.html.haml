@@ -4,4 +4,4 @@
 
 = link_to 'Edit Settings', edit_user_path(@user.id) if @user == current_refinery_user
 
-%p= profile(@user).fetch('entry', []).fetch(0, {})['aboutMe']
+%p= profile(@user)['aboutMe']
