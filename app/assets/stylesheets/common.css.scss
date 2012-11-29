@@ -11,8 +11,9 @@ html {
   background-color: #bfd8ff;
   background-attachment: scroll, fixed, fixed;
   background-repeat: no-repeat;
-  background-position: 80% 20px, 0 0, 0 0;
-  @include background-image(url('/assets/ub2a.png'),
+  background-position: 80% 10px, 0 0, 0 0;
+  //background-position: 80% -20px, 0 0, 0 0;
+  @include background-image(url('/assets/ub3a.png'),
                             radial-gradient(50% 0%, circle cover, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 60%),
                             linear-gradient(top, $QLAQ_blue, lighten($QLAQ_blue, 30%)));
 }
@@ -25,10 +26,11 @@ body {
 
 #page {
   background-color: #b6d2fd;
-  background-color: rgba(255,255,255,0.6);
+  background-color: rgba(255,255,255,0.75);
   @include border-radius(16px);
   @include box-shadow(0 3px 8px rgba(0,0,0,0.2));
   padding: $radius * 1.5;
+  position: relative;
 }
 
 h1 {
@@ -105,7 +107,8 @@ nav {
 @include hidpi (2) {
   html {
     background-size: 450px 339px, 100% 100%, 100% 100%;
-    @include background-image(url('/assets/ub2a@2x.png'),
+    background-size: 384px 400px, 100% 100%, 100% 100%;
+    @include background-image(url('/assets/ub3a@2x.png'),
                               radial-gradient(50% 0%, circle cover, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 60%),
                               linear-gradient(top, $QLAQ_blue, lighten($QLAQ_blue, 30%)));
   }
