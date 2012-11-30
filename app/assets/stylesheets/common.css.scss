@@ -103,6 +103,15 @@ nav {
   }
 }
 
+footer {
+  p {
+    iframe {
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+  }
+}
+
 
 @include hidpi (2) {
   html {
