@@ -6,7 +6,7 @@ GIT
 
 GIT
   remote: git://github.com/radar/forem.git
-  revision: 8c48ca1e64836d523e35995a9d50fa7acd43ae00
+  revision: 16c04bf4f5815a023a87411693b7510162b23082
   specs:
     forem (1.0.0.beta1)
       cancan (= 1.6.7)
@@ -108,7 +108,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.19)
-    multi_json (1.3.7)
+    multi_json (1.4.0)
     orm_adapter (0.0.7)
     paper_trail (2.6.4)
       activerecord (~> 3.0)

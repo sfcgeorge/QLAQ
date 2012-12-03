@@ -49,6 +49,7 @@ gem 'refinerycms-i18n', '~> 2.0.0'
 #  gem 'refinerycms-page-images', '~> 2.0.0'
 
 gem 'forem', :git => 'git://github.com/radar/forem.git'
+#gem 'forem', :path => '../../../Projects/Programming/Ruby/forem'
 gem 'forem-theme-base', :git => 'git://github.com/radar/forem-theme-base.git'
 
 gem 'forem-gfm_formatter'

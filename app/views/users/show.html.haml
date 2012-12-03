@@ -4,4 +4,17 @@
 
 = link_to 'Edit Settings', edit_user_path(@user.id) if @user == current_refinery_user
 
+
+%h3= 'About Me' unless profile(@user)['aboutMe'].blank?
+
 %p= profile(@user)['aboutMe']
+
+
+%h3= 'Location' unless profile(@user)['currentLocation'].blank?
+
+%p= profile(@user)['currentLocation']
+
+-if @user.show_age
+  %h3 Age
+
+  %p= safe_age(@user)

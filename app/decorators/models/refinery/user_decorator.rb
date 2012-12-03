@@ -1,6 +1,6 @@
 Refinery::User.class_eval do
     attr_accessor :secret_code
-    attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :plugins, :login, :birthday, :secret_code
+    attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :plugins, :login, :birthday, :secret_code, :show_age
 
     validates :birthday, :inclusion => {
                            :in => Time.now.years_ago(25).to_date..Time.now.years_ago(13).to_date,

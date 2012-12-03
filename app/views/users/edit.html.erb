@@ -20,6 +20,10 @@
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, :class => 'larger widest' %>
   </div>
+  <div class='field'>
+    <%= f.label :show_age %>
+    <%= f.check_box :show_age, :class => 'larger widest' %>
+  </div>
 
 
   <%= render '/refinery/admin/form_actions', :f => f,

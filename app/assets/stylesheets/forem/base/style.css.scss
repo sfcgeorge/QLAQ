@@ -75,6 +75,9 @@ body{
   .odd {
     background-color: #cfcfcf;
   }
+  a[name=post-1] + div.post {
+    border-bottom: 1px dashed darken($QLAQ_blue, 25%);
+  }
   .post {
     min-height: 75px;
     clear: both;
@@ -105,6 +108,9 @@ body{
       padding: .1em 1em;
       position: relative;
 
+      p {
+        word-wrap: break-word;
+      }
       h1, h2, h3, h4, h5, h6 {
         font-family: inherit;
         text-align: left;
