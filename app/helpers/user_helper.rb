@@ -32,9 +32,9 @@ module UserHelper
 
   def sexuality_flag(user)
     unless user.sexuality.blank?
-      flags = %w(ally gay bisexual asexual pansexual transgender genderqueer
-                 transgender-gay transgender-bisexual transgender-asexual transgender-pansexual transgender-straight
-                 genderqueer-gay genderqueer-bisexual genderqueer-asexual genderqueer-pansexual genderqueer-straight)
+      flags = %w(ally gay lesbian bisexual asexual pansexual transgender genderqueer
+                 transgender-gay transgender-lesbian transgender-bisexual transgender-asexual transgender-pansexual transgender-straight
+                 genderqueer-gay genderqueer-lesbian genderqueer-bisexual genderqueer-asexual genderqueer-pansexual genderqueer-straight)
       flag = user.sexuality.downcase
       image_tag "/assets/sexuality_flags/#{flag}.png", :class => 'sexuality' if flags.include? flag
     end
