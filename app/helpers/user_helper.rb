@@ -31,11 +31,13 @@ module UserHelper
   end
 
   def sexuality_flag(user)
-    flags = %w(ally gay bisexual asexual pansexual transgender genderqueer
-               transexual-gay transexual-bisexual transexual-asexual transexual-pansexual
-               genderqueer-gay genderqueer-bisexual genderqueer-asexual genderqueer-pansexual)
-    flag = user.sexuality.downcase
-    image_tag "/assets/sexuality_flags/#{flag}.png", :class => 'sexuality' if flags.include? flag
+    unless user.sexuality.blank?
+      flags = %w(ally gay bisexual asexual pansexual transgender genderqueer
+                 transexual-gay transexual-bisexual transexual-asexual transexual-pansexual
+                 genderqueer-gay genderqueer-bisexual genderqueer-asexual genderqueer-pansexual)
+      flag = user.sexuality.downcase
+      image_tag "/assets/sexuality_flags/#{flag}.png", :class => 'sexuality' if flags.include? flag
+    end
   end
 
   private

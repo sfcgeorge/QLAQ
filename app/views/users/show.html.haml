@@ -15,11 +15,12 @@
 %p= profile(@user)['currentLocation']
 
 
-%h3= 'Gender / Sexuality' unless @user.sexuality.blank?
+-unless @user.sexuality.blank?
+  %h3= 'Gender / Sexuality'
 
-%p
-  = @user.sexuality.capitalize
-  = sexuality_flag(@user)
+  %p
+    = @user.sexuality.capitalize
+    = sexuality_flag(@user)
 
 
 
