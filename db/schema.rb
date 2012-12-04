@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121202235749) do
+ActiveRecord::Schema.define(:version => 20121204100816) do
 
   create_table "forem_categories", :force => true do |t|
     t.string   "name",       :null => false
@@ -232,6 +232,7 @@ ActiveRecord::Schema.define(:version => 20121202235749) do
     t.boolean  "forem_auto_subscribe",   :default => false
     t.date     "birthday"
     t.boolean  "show_age"
+    t.text     "sexuality"
   end
 
   add_index "refinery_users", ["id"], :name => "index_refinery_users_on_id"

@@ -1,6 +1,6 @@
 %h1= @title
 
-= forem_avatar(@user, { size: 200 })
+.profile_icon= forem_avatar(@user, { size: 400 })
 
 = link_to 'Edit Settings', edit_user_path(@user.id) if @user == current_refinery_user
 
@@ -13,6 +13,15 @@
 %h3= 'Location' unless profile(@user)['currentLocation'].blank?
 
 %p= profile(@user)['currentLocation']
+
+
+%h3= 'Gender / Sexuality' unless @user.sexuality.blank?
+
+%p
+  = @user.sexuality.capitalize
+  = sexuality_flag(@user)
+
+
 
 -if @user.show_age
   %h3 Age

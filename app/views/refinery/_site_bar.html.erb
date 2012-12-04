@@ -2,6 +2,8 @@
 <% content_for :meta, tag('link', :rel => 'shortcut icon', :href => '/assets/favicon.png') %>
 <% content_for :meta, tag('link', :rel => 'icon', :href => '/assets/favicon.png') %>
 <% content_for :meta, tag('link', :rel => 'apple-touch-icon-precomposed', :href => '/assets/favicon512.png') %>
+<% content_for :meta, tag('meta', :name => 'viewport', :content => 'width = device-width') %>
+<% content_for :meta, tag('meta', :name => 'viewport', :content => 'initial-scale = 1.0') %>
 
 <% if refinery_user? && current_refinery_user.forem_admin && "#{controller_name}##{action_name}" != 'pages#preview' %>
   <% unless admin? # all required JS included by backend. %>

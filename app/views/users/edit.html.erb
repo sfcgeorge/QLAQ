@@ -20,11 +20,16 @@
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, :class => 'larger widest' %>
   </div>
+  (Optional) Show your gender / sexuality.
+  <div class='field'>
+    <%= f.label :sexuality %>
+    <%= f.text_field :sexuality, :class => 'larger widest' %>
+  </div>
+  Show your age (not DOB). May show your age changing several days after your birthday for security.
   <div class='field'>
     <%= f.label :show_age %>
     <%= f.check_box :show_age, :class => 'larger widest' %>
   </div>
-
 
   <%= render '/refinery/admin/form_actions', :f => f,
              :submit_continue => false,

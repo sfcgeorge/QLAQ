@@ -4,6 +4,9 @@
 
 #site_bar {
   background: transparent !important;
+  #site_bar_content {
+    width: auto;
+  }
 }
 
 html {
@@ -12,6 +15,7 @@ html {
   background-attachment: fixed, scroll, fixed;
   background-repeat: no-repeat;
   background-position: 0 0, 80% 10px, 0 0;
+  padding: 0 10px;
   //background-position: 80% -20px, 0 0, 0 0;
   @include background-image(radial-gradient(50% 0%, circle cover, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 60%),
                             url('/assets/ub3a.png'),
@@ -29,7 +33,7 @@ body {
   background-color: rgba(255,255,255,0.75);
   @include border-radius($radius);
   @include box-shadow(0 2px 6px rgba(0,0,0,0.2));
-  padding: $radius * 1.5;
+  padding: $radius;
   position: relative;
 }
 
@@ -70,9 +74,14 @@ nav {
 
     li {
       @include inline-block;
+
+      a {
+        padding: 15px 20px;
+        @include inline-block;
+      }
+
       font-size: 18px;
       font-weight: bold;
-      padding: 15px 20px;
       margin: 0;
       $num: 8;
 
@@ -111,6 +120,26 @@ nav {
   }
 }
 
+section:not(.no_side_body) {
+  > #body {
+    width: 55%;
+    float: left;
+  }
+  > #side_body {
+    width: 40%;
+    float: right;
+  }
+}
+
+.sexuality {
+
+}
+
+.profile_icon img {
+  width: 200px;
+  height: 200px;
+}
+
 footer {
   p {
     iframe {
@@ -121,7 +150,49 @@ footer {
 }
 
 
-@include hidpi (2) {
+@media only screen
+and (max-width : 760px) { //nav bar
+  nav {
+    ul {
+      li {
+        a {
+          padding: 12px 8px;
+        }
+
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+
+@media only screen
+and (max-width : 500px) {
+  html {
+    padding: 0;
+  }
+
+  nav {
+    ul {
+      display: block;
+      float: none;
+
+      li {
+        display: block;
+        @include border-radius($radius);
+        text-align: center;
+
+        a {
+          padding: 6px 0px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+@include hidpi (1.5) {
   html {
     background-size: 450px 339px, 100% 100%, 100% 100%;
     background-size: 100% 100%, 337px 350px, 100% 100%;
