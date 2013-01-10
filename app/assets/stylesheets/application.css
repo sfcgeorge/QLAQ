@@ -12,6 +12,7 @@
  *
  *= require_self
  *= require "forem/base/style"
+ *  require "emoticon_fontify/emoticons"
  *= require_tree .
  */
 
