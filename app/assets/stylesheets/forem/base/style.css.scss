@@ -109,7 +109,7 @@ body{
           font-weight: bold;
         }
         .moderator {
-          @include border-radius(3px);
+          border-radius: 3px;
           padding: 0 2px;
           background-color: #080;
           color: #fff;

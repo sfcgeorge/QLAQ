@@ -31,7 +31,7 @@ body {
 #page {
   background-color: #b6d2fd;
   background-color: rgba(255,255,255,0.75);
-  @include border-radius($radius);
+  border-radius: $radius;
   @include box-shadow(0 2px 6px rgba(0,0,0,0.2));
   padding: $radius;
   position: relative;
@@ -66,7 +66,7 @@ nav {
   ul {
     font-size: 0;
     padding: 0;
-    //@include border-radius($radius);
+    //border-radius: $radius;
     //@include box-shadow(0 3px 8px rgba(0,0,0,0.2));
     overflow: hidden;
     float: left;
@@ -107,14 +107,14 @@ nav {
       }
 
       &.first {
-        @include border-top-left-radius($radius);
-        @include border-bottom-left-radius($radius);
+        border-top-left-radius: $radius;
+        border-bottom-left-radius: $radius;
         //border-left: 2px solid #fff;
       }
 
       &.user_last {
-        @include border-top-right-radius($radius);
-        @include border-bottom-right-radius($radius);
+        border-top-right-radius: $radius;
+        border-bottom-right-radius: $radius;
       }
     }
   }
@@ -179,7 +179,7 @@ and (max-width : 500px) {
 
       li {
         display: block;
-        @include border-radius($radius);
+        border-radius: $radius;
         text-align: center;
 
         a {
