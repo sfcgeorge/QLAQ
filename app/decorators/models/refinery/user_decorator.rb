@@ -3,7 +3,7 @@ Refinery::User.class_eval do
     attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :plugins, :login, :birthday, :secret_code, :show_age, :sexuality
 
     validates :birthday, inclusion: {
-                           in: Time.now.years_ago(25).to_date..Time.now.years_ago(13).to_date,
+                           in: Time.now.years_ago(26).to_date..Time.now.years_ago(13).to_date,
                            message: 'must be 13-25 years old'
                          }
     validates :secret_code, inclusion: {
