@@ -1,4 +1,6 @@
 QLAQ::Application.routes.draw do
+  match "/:locale/forums" => redirect("/forums?locale=%{locale}")
+
   mount Forem::Engine, :at => "/forums"
 
   scope :forums do
