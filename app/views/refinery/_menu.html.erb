@@ -19,11 +19,11 @@
       <% if current_refinery_user.forem_admin %>
         <!--<li><%= link_to "Admin", forem.admin_root_url %></li>-->
       <% end %>
-      <li class="user_first"><%= link_to "Profile", main_app.user_path(current_refinery_user) %></li>
-      <li class="user_last"><%= link_to "Log out", refinery.destroy_refinery_user_session_path %></li>
+      <li class="user_first"><%= link_to t(:profile), main_app.user_path(current_refinery_user) %></li>
+      <li class="user_last"><%= link_to t(:logout), refinery.destroy_refinery_user_session_path %></li>
     <% else %>
-      <li class="user_first"><%= link_to "Sign up", main_app.new_user_path %></li>
-      <li class="user_last"><%= link_to "Log in", refinery.new_refinery_user_session_path %></li>
+      <li class="user_first"><%= link_to t(:signup), main_app.new_user_path %></li>
+      <li class="user_last"><%= link_to t(:login), refinery.new_refinery_user_session_path %></li>
     <% end %>
   </ul>
 </nav>
