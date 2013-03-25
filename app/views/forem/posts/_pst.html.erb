@@ -29,9 +29,9 @@
       </div>
     <% end %>
 
-    <a href="<%= "#{forem.forum_topic_path(pst.topic.forum, pst.topic)}#post-#{pst.id}" %>">
+    <%= link_to forem.forum_topic_path(pst.topic.forum, pst.topic, :anchor => "post-#{pst.id}", :page => pst.topic.last_page) do %>
       <time datetime="<%= pst.created_at.to_s(:db) -%>"><%= "#{pst.topic.forum.name} » #{pst.topic} » #{time_ago_in_words(pst.created_at)} #{t("ago")}" %></time>
-    </a>
+    <% end %>
     <%= forem_format(pst.text) %>
 
     <% if pst.reply_to %>
