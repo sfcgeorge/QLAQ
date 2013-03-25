@@ -1,5 +1,6 @@
 @import "bourbon";
 @import "base";
+@import "forem/base/variables";
 
 
 #site_bar {
@@ -24,7 +25,7 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
-  color: darken($QLAQ_blue, 45%);
+  color: $default-text;
   padding-bottom: 10px;
 }
 

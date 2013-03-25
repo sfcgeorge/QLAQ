@@ -1,9 +1,11 @@
 QLAQ::Application.routes.draw do
   match "/:locale/forums" => redirect("/forums?locale=%{locale}")
 
-  mount Forem::Engine, :at => "/forums"
+  mount Forem::Engine, :at => '/forums'
 
   scope :forums do
+    get 'forums/posts/recent' => 'posts#recent', :as => :recent_posts
+
     resources :users, :only => [:show, :new, :create, :edit, :update]
 
     get 'users/register' => 'users#forem_new', :as => :new_forem_user_registration

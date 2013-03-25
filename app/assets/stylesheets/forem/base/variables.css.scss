@@ -9,6 +9,6 @@ $bar1-midbg: lighten($QLAQ_blue, 20%);
 $bar1-bottombg: #aaa;
 $lighter-text: #777;
 $visited-text: #333;
-$default-text: #000;
+$default-text: darken($QLAQ_blue, 45%);
 $darkbg: #333;
 $darkbg-highlight: #222;

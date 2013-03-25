@@ -197,6 +197,15 @@ body{
       }
     }
   }
+
+  &.recent .post {
+    margin-bottom: 1em;
+
+    .contents time {
+      font-size: 1em;
+      color: inherit;
+    }
+  }
 }
 
 table.subdued{

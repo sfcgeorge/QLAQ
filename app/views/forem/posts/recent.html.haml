@@ -1,0 +1,7 @@
+%h2
+  =link_to t('forem.forum.forums'), forem.root_path
+  &raquo;
+  =t(:recent)
+
+#posts.recent
+  = render :partial => "forem/posts/pst", :collection => @posts

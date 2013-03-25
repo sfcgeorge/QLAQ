@@ -1,0 +1,43 @@
+<a name='post-<%= pst.id %>'></a>
+<div id='post_<%= pst_counter + 1 %>' class='post <%= cycle('odd', 'even') -%>'>
+
+  <div class='user'>
+    <div class='username'>
+      <%= link_to_if Forem.user_profile_links, pst.user, [main_app, pst.user] %>
+    </div>
+    <div class='icon'><%= forem_avatar(pst.user, :size => 120) %></div>
+    <div class='mini_profile'>
+      <div class='sexuality_icon'><%= sexuality_flag(pst.user) %></div>
+      <div class='age'><%= safe_age(pst.user) if pst.user.show_age %></div>
+      <div class='moderator'><%= 'Mod' if pst.user.forem_admin %></div>
+    </div>
+  </div>
+
+  <div class='contents'>
+    <% if pst.pending_review? %>
+      <div class='moderation'>
+        <%= t(".pending_review") %>
+        <% if forem_admin_or_moderator?(pst.topic.forum) %>
+          <% if local_assigns[:mass_moderation] %>
+            <%= render "forem/posts/moderation_tools", :post => pst %>
+          <% else %>
+            <%= form_tag forem.forum_moderate_posts_path(pst.topic.forum), :method => :put do %>
+              <%= render "forem/posts/moderation_tools", :post => pst %>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+
+    <a href="<%= "#{forem.forum_topic_path(pst.topic.forum, pst.topic)}#post-#{pst.id}" %>">
+      <time datetime="<%= pst.created_at.to_s(:db) -%>"><%= "#{pst.topic.forum.name} » #{pst.topic} » #{time_ago_in_words(pst.created_at)} #{t("ago")}" %></time>
+    </a>
+    <%= forem_format(pst.text) %>
+
+    <% if pst.reply_to %>
+      <span class='in_reply_to'>
+        <%= link_to "#{t("forem.post.in_reply_to")} #{pst.reply_to.user}", "#post-#{pst.reply_to.id}" %>
+      </span>
+    <% end %>
+  </div>
+</div>
